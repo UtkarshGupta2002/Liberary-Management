@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(to right, white, rgb(123, 123, 244));
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            transition: background-color 0.5s ease;
+        }
+        nav {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.nav-links {
+    display: inline-block;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+header {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    text-align: center;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+    /* this is use to so effect like typing*/  */
+
+
+.header-text {
+    font-size: 1.0em;
+    margin: 0 8px; /* Space around the text */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and movement */
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="number"], button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #5cb85c;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        button {
+            background-color: #5cb85c;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background-color: #4cae4c;
+            transform: scale(1.05);
+        }
+        .dark {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <div class="nav-links">
+                <a href="/second">Home</a>
+                <a href="/recommend">Recommendations</a> <!-- Updated to anchor link -->
+                <a href="/about">About Us</a>
+                <a href="/dev">Developer</a>
+                
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="header-wrapper">
+            <span class="bracket"></span>
+            <h1 id="headerText" class="header-text">Library Management</h1>
+            <span class="bracket"></span>
+        </div>
+    </header>
+    
+    <div class="container">
+        <h2>Add a New Book</h2>
+        <form action="/add_book" method="POST">
+            <input type="text" name="title" placeholder="Book Title" required>
+            <input type="text" name="author" placeholder="Author" required>
+            <input type="text" name="genre" placeholder="Genre">
+            <input type="number" name="published_year" placeholder="Published Year">
+            <button type="submit">Add Book</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("mode").addEventListener("click", function() {
+            document.body.classList.toggle("dark");
+        });
+    </script>
+</body>
+</html>
