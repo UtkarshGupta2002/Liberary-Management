@@ -1,4 +1,5 @@
-#Book Recommendation01/
+Book Recommendation01/
+##
 ``│── app.py                    # Main backend logic (Flask)``
 ##
 ``#│── server.js                  # Backend API logic (Node.js)``
