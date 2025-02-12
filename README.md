@@ -1,10 +1,10 @@
 Book Recommendation01/
 ##
-``│── app.py                    # Main backend logic (Flask)``
+│── app.py                    # Main backend logic (Flask)
 ##
-``#│── server.js                  # Backend API logic (Node.js)``
+│── server.js                  # Backend API logic (Node.js)
 ##
-``│── books.pkl                  # Serialized book data``
+│── books.pkl                  # Serialized book data
 ##
 #│── popular.pkl                # Popular book data
 #│── pt.pkl                     # Pivot table for user-book interactions
